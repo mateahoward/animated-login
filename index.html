@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+    <head>
+        <meta charset="UTF-8">
+        <!-- Define a description of your web page: -->
+        <meta name="description" content="Free Web tutorials">
+        <!-- Define keywords for search engines: -->
+        <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+        <!-- Define the author of a page: -->
+        <meta name="author" content="John Doe">
+        <!-- Setting the viewport to make your website look good on all devices: -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Define your page title -->
+        <title> Your page title </title>
+
+        <!-- Defining main stylesheet-->
+        <link rel="stylesheet" href="/assets/styles/style.css">
+        <!-- Defining animation stylesheet -->
+        <link rel="stylesheet" href="/assets/styles/animation.css">
+        <!-- Including JS files -->
+        <script type="text/javascript" src="/assets/scripts/script.js"></script>
+    </head>
+    <body class="pink-background">
+
+        <main class="form-wrapper">
+           
+            <section class="form__left-side" id="left-side">
+
+                 <!-- SIGNUP FORM SECTION -->
+                <aside class="signup-form__wrapper">
+                    <form class="signup-form">
+                        <legend> Create an account </legend>
+
+                        <fieldset>
+                            <label for="username"> Username <span class="required"> (required)</span> </label>
+                            <input type="text" id="username" autocomplete="username" aria-autocomplete="inline" required aria-required="true" placeholder="e.g johnsmith24">
+                        </fieldset>
+
+                        <fieldset>
+                            <label for="email"> E-mail Address <span class="required"> (required)</span> </label>
+                            <input type="email" id="email" autocomplete="email" aria-autocomplete="inline" required aria-required="true" placeholder="e.g john-smith@email.com">
+                        </fieldset>
+
+                        <fieldset>
+                            <label for="password"> Create Password <span class="required"> (required)</span> </label>
+                            <input type="password" id="password" autocomplete="new-password" aria-autocomplete="inline" required aria-required="true" placeholder="">
+                        </fieldset>
+
+                        <fieldset>
+                            <label for="conrifm-password"> Confirm Password <span class="required"> (required)</span> </label>
+                            <input type="password" id="conrifm-password" autocomplete="new-password" aria-autocomplete="inline" required aria-required="true" placeholder="" onkeyup="validatePassword()">
+                            <span class="validation-warning" id="passwordNotConfirmed">Password is not matching</span>
+                        </fieldset>
+
+                        <fieldset class="singup-form__submit">
+                            <button type="submit" class="signup-button" onsubmit="signUp(e)"> Sign up</button>
+                            <span class="signup-button__trigger"> 
+                                Already have an account? 
+                                <button type="button" onclick="showLoginForm()">Sign in</button> 
+                            </span>
+                        </fieldset>
+                    </form>
+                </aside>
+
+
+                 <aside class="signup-form__image-wrapper">
+                    <img src="/assets/images/lisboa.jpg" alt="Lisbon, Portugal">
+                </aside>
+            </section>
+
+            <section class="form__right-side" id="right-side">
+
+                <aside class="login-form__image-wrapper">
+                    <img src="/assets/images/venice.jpg" alt="Venice, Italy">
+                </aside>
+
+                <!-- LOGIN FORM SECTION -->
+                <aside class="login-form__wrapper">
+                    <form class="login-form">
+                        <legend> Sign In </legend>
+
+                        <fieldset>
+                            <label for="sign-in-email"> E-mail Address <span class="required"> (required)</span> </label>
+                            <input type="email" id="sign-in-email" autocomplete="email" aria-autocomplete="inline" required aria-required="true" placeholder="e.g john-smith@email.com">
+                        </fieldset>
+
+                        <fieldset>
+                            <label for="sign-in-password"> Password <span class="required"> (required)</span> </label>
+                            <input type="password" id="sign-in-password" autocomplete="current-password" aria-autocomplete="inline" required aria-required="true" placeholder="">
+                        </fieldset>
+
+
+                        <fieldset class="login-form__submit">
+                            <button type="submit" class="login-button" onsubmit="signIn()"> Sign in</button>
+                            <span class="login-button__trigger"> 
+                                Don't have an account? 
+                                <button type="button" onclick="showSignupForm()">Sign up</button> 
+                            </span>
+                        </fieldset>
+                    </form>
+                </aside>
+
+
+
+           </section>
+
+        </main>
+
+    </body>
+</html>

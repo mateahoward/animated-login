@@ -1,0 +1,36 @@
+.move-up {
+    animation: moveUp 2s ease-out forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes moveUp
+{
+  from {
+        opacity: 0;
+        transform: translateY(0); 
+    }
+    to { 
+        transform: translateY(-830px); 
+        opacity: 1;
+    }   
+}
+
+
+.move-down {
+    animation: moveDown 2s ease-out backwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes moveDown
+{
+    from {
+        
+        transform: translateY(830px); 
+        opacity: 0;
+         
+    }
+    to { 
+        transform: translateY(0); 
+        opacity: 1;
+    }
+}

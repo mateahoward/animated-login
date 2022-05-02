@@ -1,0 +1,254 @@
+/*************************/
+/*****  FONTS USED   ******/
+/*************************/
+
+@font-face {
+    font-family: Montserrat;
+    src: url(/assets/fonts/Montserrat-Regular.ttf);
+}
+
+/**************************/
+/***** GLOBAL STYLES ******/
+/*************************/
+
+body {
+    margin: 0;
+    font-family: "Montserrat"
+}
+
+button {
+    cursor: pointer;
+}
+
+button:focus-visible {
+    outline: 3px dashed #333;
+}
+
+.pink-background {
+    background-color: #e4dbde;
+}
+
+.required {
+    font-size: 10px;
+    font-weight: bold;
+    color: #24232a;
+}
+
+.validation-warning.visible {
+    font-weight: 1em;
+    margin-top: 5px;
+    color: #cd162f;
+    display: flex;
+}
+
+.validation-warning {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/*************************/
+/***** FORM STYLES ******/
+/*************************/
+
+
+.form-wrapper {
+    background-color: white;
+    width: 80%;
+    height: 750px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    position: relative;
+    top: 100px;
+    overflow: hidden;
+
+    display: flex;
+    box-shadow: rgb(0 0 0 / 20%) 0px 3px 3px -2px, rgb(0 0 0 / 14%) 0px 3px 4px 0px, rgb(0 0 0 / 12%) 0px 1px 8px 0px;
+
+}
+
+
+.form__left-side {
+    display: flex;
+    flex-direction: column;
+    height: 750px;
+    width: 50%;
+}
+
+.form__right-side {
+    display: flex;
+    flex-direction: column;
+    height: 750px;
+    width: 50%;
+}
+
+
+.signup-form__wrapper,
+.login-form__wrapper {
+    width: 100%;
+}
+
+.signup-form, 
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+    height: 750px;
+}
+
+.signup-form fieldset, 
+.login-form fieldset {
+   border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin: 5px;
+}
+
+
+.signup-form legend, 
+.login-form legend {
+    font-size: 1.6em;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    text-align: center;
+    width: 100%;
+}
+
+.signup-form label, 
+.login-form label {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.signup-form input, 
+.login-form input {
+   border: none;
+   background-color: #fdf8f8;
+   height: 35px;
+   width: 100%;
+   box-shadow: rgb(0 0 0 / 20%) 0px 3px 3px -2px, rgb(0 0 0 / 14%) 0px 3px 4px 0px, rgb(0 0 0 / 12%) 0px 1px 8px 0px;
+   text-indent: 10px;
+}
+
+.signup-form input:target
+.signup-form input:focus, 
+.signup-form input:focus-visible,
+.login-form input:target,
+.login-form input:focus,
+.login-form input:focus-visible {
+    outline: 3px dashed #333;
+}
+
+
+
+.singup-form__submit button {
+    border: none;
+    padding: 15px 35px;
+    background-color: #cd162f;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.signup-button__trigger button,
+.login-button__trigger button {
+    margin-top: 30px;
+    border: none;
+    background-color: white;
+    color: #4150a3;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+.signup-button__trigger,
+.login-button__trigger {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.signup-button__trigger button:hover,
+.login-button__trigger button:hover {
+    color: #293474;
+}
+
+.login-form__submit button.login-button  {
+    border: none;
+    padding: 15px 35px;
+    background-color: #4150a3;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+.signup-form__image-wrapper,
+.login-form__image-wrapper {
+    width: 100%;
+}
+
+.signup-form__image-wrapper img,
+.login-form__image-wrapper img {
+    width: 100%;
+    height: 750px;
+}
+
+
+@media (max-width:1200px) {
+    .form-wrapper {
+        width: 90%;
+    }
+}
+
+@media (max-width: 860px) {
+
+    .form-wrapper {
+        flex-direction: column;
+    }
+
+    .signup-form, 
+    .login-form {
+        padding: 20px;
+    }
+
+    .signup-form legend, 
+    .login-form legend {
+        font-size: 1.2em;
+    }
+
+    .signup-form__image-wrapper,
+    .login-form__image-wrapper {
+        display: none;
+    }
+
+    .form__left-side,
+    .form__right-side {
+        width: 100%;
+    }
+
+    .signup-form__wrapper {
+        width: 100%;
+    }
+
+    .signup-form fieldset, 
+    .login-form fieldset {
+        width: 90%;
+    }
+
+    .signup-form label, 
+    .login-form label {
+       font-size: 1em;
+    }
+}
